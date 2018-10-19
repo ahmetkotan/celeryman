@@ -1,16 +1,17 @@
-from setuptools import setup
+from distutils.core import setup
 import os
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
-    README = readme.read()
+BASE_DIR = os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir))
 
+with open(os.path.join(BASE_DIR, 'README.rst')) as readme:
+    README = readme.read()
 
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='celeryman',
-    version='0.9',
-    packages=['celeryman'],
+    version='0.9.1.3',
+    packages=['celeryman', 'celeryman.migrations'],
     url='https://github.com/ahmetkotan/celeryman',
     license='GPL',
     author='Ahmet Kotan',
@@ -18,7 +19,8 @@ setup(
     description='Celery Management App for Django',
     long_description=README,
     install_requires=[
-        'celery==4.1.1'
+        'celery==4.1.1',
+        'redis==2.10.6'
     ],
     classifiers=[
         'Environment :: Web Environment',
