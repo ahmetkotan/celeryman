@@ -56,7 +56,7 @@ Or use
 Admin Panel
 ===========
 To usable the async tasks:
-http://localhost:8000/admin/celeryman/celerytask/
+/admin/celeryman/celerytask/
 
 To view the created async tasks and to create new async task:
-http://localhost:8000/admin/celeryman/managedtask/
+/admin/celeryman/managedtask/
