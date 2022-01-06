@@ -19,7 +19,7 @@ setup(
     description='Celery Management App for Django',
     long_description=README,
     install_requires=[
-        'celery==4.1.1',
+        'celery==5.2.2',
         'redis==2.10.6'
     ],
     classifiers=[
